@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/admin/assets/css/bootstrap.min.css}"/>
+   <link rel="stylesheet" type="text/css" th:href="@{/admin/font-awesome/4.5.0/css/font-awesome.min.css}"/>
+   <link rel="stylesheet" type="text/css" th:href="@{/admin/assets/css/ace.min.css}" class="ace-main-stylesheet" id="main-ace-style" />
+    <script th:src="@{/admin/assets/js/ace-extra.min.js}"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript' th:src="@{/admin/js/jquery-2.2.3.min.js}"></script>
+    <script th:src="@{/admin/assets/js/jquery.2.1.1.min.js}"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <title>Trang chủ</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/web/vendor/bootstrap/css/bootstrap.min.css}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" th:href="@{/web/css/small-business.css}" >
+</head>
+<body>
+
+<nav  class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Home.vn</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <!--                <li class="nav-item active"><a class="nav-link" href="<c:url value="/trang-chu"/>">Trang chủ-->
+                <li class="nav-item active"><a class="nav-link">Trang chủ
+                    <span class="sr-only">(current)</span>
+                </a></li>
+
+
+<!--                <th:block th:each="item : ${menu}">-->
+<!--                    <li class="nav-item active"><a class="nav-link" th:href="@{'/trang-chu/' + ${item}}"><span th:utext="${item}">-->
+<!--                        <span class="sr-only">(current)</span>-->
+<!--                        </a></li>-->
+<!--                </th:block>-->
+
+
+<!--                <th:block th:if="${fullName}">-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">Welcome <span th:text="${fullName}"></span></a></li>-->
+<!--                    <li class="nav-item"><a class="nav-link" th:href="@{/thoat}" >Thoát</a></li>-->
+<!--                </th:block>-->
+
+<!--                <th:block th:unless="${fullName}">-->
+                    <li class="nav-item"><a class="nav-link" th:href="@{/dang-nhap}">Đăng nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Đăng ký</a></li>
+<!--                </th:block>-->
+
+            </ul>
+
+
+
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+        <div class="col-lg-7">
+            <img class="img-fluid rounded mb-4 mb-lg-0"
+                 src="http://placehold.it/900x400" alt="">
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">Business Name or Tagline</h1>
+            <p>This is a template that is great for small businesses. It
+                doesn't have too much fancy flare to it, but it makes a great use
+                of the standard Bootstrap core components. Feel free to use this
+                template for any project you want!</p>
+            <a class="btn btn-primary" href="#">Call to Action!</a>
+        </div>
+        <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+
+    <!-- Call to Action Well -->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+        <div class="card-body">
+            <p class="text-white m-0">This call to action card is a great
+                place to showcase some important information or display a clever
+                tagline!</p>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+<!--        <c:forEach var="item" items="${model.listResult}">-->
+<!--        <th:block th:each="item : ${model.listResult}">-->
+
+
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">
+<!--                            <a th:href="@{'/trang-chu/noi-dung/' + ${item.id}}">-->
+<!--                            <span th:text="${item.title}"/>-->
+<!--                        </a>-->
+                        </h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Rem magni quas ex numquam, maxime minus quam
+                            molestias corporis quod, ea minima accusamus.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary btn-sm">More Info</a>
+                    </div>
+                </div>
+            </div>
+        </th:block>
+<!--        </c:forEach>-->
+
+        <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+
+
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your
+            Website 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<script th:src="@{/admin/paging/jquery.twbsPagination.js}"></script>
+<script th:src="@{/admin/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery-ui.custom.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.ui.touch-punch.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.easypiechart.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.sparkline.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.flot.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.flot.pie.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.flot.resize.min.js}"></script>
+<script th:src="@{/admin/assets/js/ace-elements.min.js}"></script>
+<script th:src="@{/admin/assets/js/ace.min.js}"></script>
+<script th:src="@{/admin/assets/js/bootstrap.min.js}"></script>
+
+<!-- page specific plugin scripts -->
+<script th:src="@{/admin/assets/js/jquery-ui.min.js}"></script>
+<!-- Bootstrap core JavaScript -->
+<script th:src="@{/web/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{/web/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
