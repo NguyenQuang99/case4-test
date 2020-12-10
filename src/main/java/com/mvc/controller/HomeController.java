@@ -42,7 +42,7 @@ public class HomeController {
 
     @RequestMapping(value = "/trang-chu/{code}", method = RequestMethod.GET)
     public ModelAndView sortNew(@PathVariable("code") String code) {
-        ModelAndView mav = new ModelAndView("web/home");
+        ModelAndView mav = new ModelAndView("home");
         NewDTO model = new NewDTO();
         if(SecurityUtils.getAuthorities().get(0).equals("ROLE_MANAGER") || SecurityUtils.getAuthorities().get(0).equals("ROLE_EMPLOYEE")) {
             mav.addObject("fullName", SecurityUtils.getPrincipal().getUsername());
