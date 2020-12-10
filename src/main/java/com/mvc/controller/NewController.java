@@ -39,7 +39,7 @@ public class NewController {
         NewDTO newDTO = newService.findById(id);
         mav.addObject("newDTO", newDTO);
         model.setListResult(commentService.getAllByNewId(id));
-        if (SecurityUtils.getAuthorities().get(0).equals("ADMIN") || SecurityUtils.getAuthorities().get(0).equals("USER")) {
+        if(SecurityUtils.getAuthorities().get(0).equals("ROLE_MANAGER") || SecurityUtils.getAuthorities().get(0).equals("ROLE_EMPLOYEE")) {
             mav.addObject("fullName", SecurityUtils.getPrincipal().getUsername());
             mav.addObject("userId", SecurityUtils.getPrincipal().getId());
         }

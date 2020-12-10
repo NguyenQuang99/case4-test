@@ -5,6 +5,7 @@ import com.mvc.service.ICategoryService;
 import com.mvc.service.INewService;
 import com.mvc.service.IUserService;
 import com.mvc.util.MessageUtil;
+import com.mvc.util.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -54,9 +55,9 @@ public class AdminNewController {
             mav.addObject("message", message.get("message"));
             mav.addObject("alert", message.get("alert"));
         }
-//        if(SecurityUtils.getAuthorities().get(0).equals("ADMIN") || SecurityUtils.getAuthorities().get(0).equals("USER") ) {
-//            mav.addObject("fullName", SecurityUtils.getPrincipal().getFullName());
-//        }
+        if(SecurityUtils.getAuthorities().get(0).equals("ROLE_MANAGER") || SecurityUtils.getAuthorities().get(0).equals("ROLE_EMPLOYEE")) {
+            mav.addObject("fullName", SecurityUtils.getPrincipal().getUsername());
+        }
 
         mav.addObject("model", model);
         return mav;
@@ -80,9 +81,9 @@ public class AdminNewController {
 
         mav.addObject("categories", categoryService.findAll());
         mav.addObject("model", model );
-//        if(SecurityUtils.getAuthorities().get(0).equals("ADMIN") || SecurityUtils.getAuthorities().get(0).equals("USER") ) {
-//            mav.addObject("fullName", SecurityUtils.getPrincipal().getFullName());
-//        }
+        if(SecurityUtils.getAuthorities().get(0).equals("ROLE_MANAGER") || SecurityUtils.getAuthorities().get(0).equals("ROLE_EMPLOYEE")) {
+            mav.addObject("fullName", SecurityUtils.getPrincipal().getUsername());
+        }
         return mav;
     }
 

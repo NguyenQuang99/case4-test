@@ -31,8 +31,10 @@ public class HomeController {
         ModelAndView mav = new ModelAndView("home");
         NewDTO model = new NewDTO();
         model.setListResult(newService.findAll());
-        if(SecurityUtils.getAuthorities().get(0).equals("ROLE_ADMIN") || SecurityUtils.getAuthorities().get(0).equals("USER")) {
+        if(SecurityUtils.getAuthorities().get(0).equals("ROLE_MANAGER") || SecurityUtils.getAuthorities().get(0).equals("ROLE_EMPLOYEE")) {
             mav.addObject("fullName", SecurityUtils.getPrincipal().getUsername());
+            System.out.println(SecurityUtils.getPrincipal().getUsername());
+
         }
         mav.addObject("model", model);
         return mav;
@@ -42,7 +44,7 @@ public class HomeController {
     public ModelAndView sortNew(@PathVariable("code") String code) {
         ModelAndView mav = new ModelAndView("web/home");
         NewDTO model = new NewDTO();
-        if (SecurityUtils.getAuthorities().get(0).equals("ADMIN") || SecurityUtils.getAuthorities().get(0).equals("USER")) {
+        if(SecurityUtils.getAuthorities().get(0).equals("ROLE_MANAGER") || SecurityUtils.getAuthorities().get(0).equals("ROLE_EMPLOYEE")) {
             mav.addObject("fullName", SecurityUtils.getPrincipal().getUsername());
         }
         model.setListResult(newService.getAllByCategory(code));

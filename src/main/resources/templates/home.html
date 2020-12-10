@@ -43,11 +43,11 @@
                 </a></li>
 
 
-<!--                <th:block th:each="item : ${menu}">-->
-<!--                    <li class="nav-item active"><a class="nav-link" th:href="@{'/trang-chu/' + ${item}}"><span th:utext="${item}">-->
-<!--                        <span class="sr-only">(current)</span>-->
-<!--                        </a></li>-->
-<!--                </th:block>-->
+                <th:block th:each="item : ${menu}">
+                    <li class="nav-item active"><a class="nav-link" th:href="@{'/trang-chu/' + ${item}}"><span th:utext="${item}">
+                        <span class="sr-only">(current)</span>
+                        </a></li>
+                </th:block>
 
 
                 <th:block th:if="${fullName}">
