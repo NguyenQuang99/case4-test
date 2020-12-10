@@ -3,6 +3,7 @@ package com.mvc.controller;
 import com.mvc.dto.NewDTO;
 import com.mvc.service.ICategoryService;
 import com.mvc.service.INewService;
+import com.mvc.service.IUserService;
 import com.mvc.util.MessageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.nio.file.attribute.UserPrincipal;
 import java.util.Map;
 
 @Controller(value = "newControllerOfAdmin")
@@ -29,6 +31,9 @@ public class AdminNewController {
     @Autowired
     private MessageUtil messageUtil;
 
+    @Autowired
+    private IUserService userService;
+
 
     @RequestMapping(value = "/quan-tri/bai-viet/danh-sach", method = RequestMethod.GET)
     public ModelAndView showList(@RequestParam("page") int page, @RequestParam("limit") int limit, HttpServletRequest request) {
@@ -36,7 +41,7 @@ public class AdminNewController {
         NewDTO model = new NewDTO();
         model.setPage(page);
         model.setLimit(limit);
-        ModelAndView mav = new ModelAndView("list");
+        ModelAndView mav = new ModelAndView("admin_list");
 
 //        Pageable pageable = new PageRequest(page - 1, limit, Sort.by("id").descending()) ;
         Pageable pageable = PageRequest.of(page - 1, limit, Sort.by("id"));
@@ -52,14 +57,17 @@ public class AdminNewController {
 //        if(SecurityUtils.getAuthorities().get(0).equals("ADMIN") || SecurityUtils.getAuthorities().get(0).equals("USER") ) {
 //            mav.addObject("fullName", SecurityUtils.getPrincipal().getFullName());
 //        }
+
         mav.addObject("model", model);
         return mav;
 
     }
 
+
+
     @RequestMapping(value = "/quan-tri/bai-viet/chinh-sua", method = RequestMethod.GET)
     public ModelAndView editNew(@RequestParam(value = "id", required = false) Long id, HttpServletRequest request) {
-        ModelAndView mav = new ModelAndView("edit");
+        ModelAndView mav = new ModelAndView("admin_edit");
         NewDTO model = new NewDTO();
         if (id != null) {
             model = newService.findById(id);

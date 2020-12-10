@@ -11,4 +11,5 @@ public interface NewRepository extends JpaRepository<NewEntity, Long> {
 
     NewEntity findOneById(long id);
 
+
 }

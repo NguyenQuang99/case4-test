@@ -50,15 +50,15 @@
 <!--                </th:block>-->
 
 
-<!--                <th:block th:if="${fullName}">-->
-<!--                    <li class="nav-item"><a class="nav-link" href="#">Welcome <span th:text="${fullName}"></span></a></li>-->
-<!--                    <li class="nav-item"><a class="nav-link" th:href="@{/thoat}" >Thoát</a></li>-->
-<!--                </th:block>-->
+                <th:block th:if="${fullName}">
+                    <li class="nav-item"><a class="nav-link" href="#">Welcome <span th:text="${fullName}"></span></a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/thoat}" >Thoát</a></li>
+                </th:block>
 
-<!--                <th:block th:unless="${fullName}">-->
+                <th:block th:unless="${fullName}">
                     <li class="nav-item"><a class="nav-link" th:href="@{/dang-nhap}">Đăng nhập</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Đăng ký</a></li>
-<!--                </th:block>-->
+                </th:block>
 
             </ul>
 
@@ -105,16 +105,16 @@
     <div class="row">
 
 <!--        <c:forEach var="item" items="${model.listResult}">-->
-<!--        <th:block th:each="item : ${model.listResult}">-->
+        <th:block th:each="item : ${model.listResult}">
 
 
             <div class="col-md-4 mb-5">
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title">
-<!--                            <a th:href="@{'/trang-chu/noi-dung/' + ${item.id}}">-->
-<!--                            <span th:text="${item.title}"/>-->
-<!--                        </a>-->
+                            <a th:href="@{'/trang-chu/noi-dung/' + ${item.id}}">
+                            <span th:text="${item.title}"/>
+                        </a>
                         </h2>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur
                             adipisicing elit. Rem magni quas ex numquam, maxime minus quam

@@ -1,5 +1,6 @@
 package com.mvc.repository;
 
+
 import com.mvc.entity.CommentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 

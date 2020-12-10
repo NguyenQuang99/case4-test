@@ -4,7 +4,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link th:href="@{/template/login/style.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link th:href="@{/login/style.css}" rel="stylesheet" type="text/css" media="all"/>
 
 </head>
 <body id="LoginForm">
@@ -28,13 +28,13 @@
                 </div>
             </div>
 <!--            </c:if>-->
-            <form action="j_spring_security_check" id="formLogin" method="post">
+            <form  th:action="@{/j_spring_security_check}" id="formLogin" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="userName" name="j_username" placeholder="Tên đăng nhập">
+                    <input type="text" class="form-control" id="userName" name="userName" placeholder="Tên đăng nhập">
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" id="password" name="j_password" placeholder="Mật khẩu">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">
                 </div>
                 <button type="submit" class="btn btn-primary" >Đăng nhập</button>
             </form>
