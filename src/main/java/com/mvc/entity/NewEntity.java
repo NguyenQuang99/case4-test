@@ -24,6 +24,7 @@ public class NewEntity extends BaseEntity {
     @JoinColumn(name = "category_id")
     private CategoryEntity category;
 
+
 //    @OneToMany(mappedBy = "userEntity")
 //    private List<CommentEntity> comments = new ArrayList<>();
 

@@ -28,7 +28,7 @@ public class HomeController {
 
     @RequestMapping(value = "/trang-chu")
     public ModelAndView homePage() {
-        ModelAndView mav = new ModelAndView("home");
+        ModelAndView mav = new ModelAndView("sign_up");
         NewDTO model = new NewDTO();
         model.setListResult(newService.findAll());
         if(SecurityUtils.getAuthorities().get(0).equals("ROLE_MANAGER") || SecurityUtils.getAuthorities().get(0).equals("ROLE_EMPLOYEE")) {

@@ -6,6 +6,7 @@ import com.mvc.service.INewService;
 import com.mvc.service.impl.CommentService;
 import com.mvc.util.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,9 @@ public class NewController {
 
     @Autowired
     private INewService newService;
+
+
+
 
 
     @RequestMapping(value = "/trang-chu/noi-dung/{id}", method = RequestMethod.GET)

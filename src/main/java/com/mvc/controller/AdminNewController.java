@@ -7,6 +7,7 @@ import com.mvc.service.IUserService;
 import com.mvc.util.MessageUtil;
 import com.mvc.util.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -65,7 +66,6 @@ public class AdminNewController {
     }
 
 
-
     @RequestMapping(value = "/quan-tri/bai-viet/chinh-sua", method = RequestMethod.GET)
     public ModelAndView editNew(@RequestParam(value = "id", required = false) Long id, HttpServletRequest request) {
         ModelAndView mav = new ModelAndView("admin_edit");
@@ -86,5 +86,6 @@ public class AdminNewController {
         }
         return mav;
     }
+
 
 }
