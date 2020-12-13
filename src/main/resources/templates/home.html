@@ -29,7 +29,7 @@
 
 <nav  class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Home.vn</a>
+        <a class="navbar-brand" th:href="@{/trang-chu}">Home.vn</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -58,6 +58,9 @@
                     <li class="nav-item"><a class="nav-link" href="#">Welcome <span th:text="${fullName}"></span></a></li>
 
                     <li class="nav-item"><a class="nav-link" th:href="@{/thoat}" >Thoát</a></li>
+                    <li class="nav-item active">
+                        <img style="width: 42px; height: 42px; border-radius: 50%" th:src="@{'http://localhost:8080/' + ${image}}">
+                    </li>
 
                 </th:block>
 
@@ -66,9 +69,7 @@
                     <li class="nav-item"><a class="nav-link" th:href="@{/tai-khoan/tao-moi}">Đăng ký</a></li>
                 </th:block>
 
-                <li class="nav-item active">
-                    <img style="width: 42px; height: 42px; border-radius: 50%" th:src="@{'http://localhost:8080/' + ${image}}">
-                </li>
+
             </ul>
 
 
