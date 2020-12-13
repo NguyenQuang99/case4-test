@@ -31,4 +31,8 @@ public class AccountService implements IAccountService {
     }
 
 
+    @Override
+    public UserEntity findOneById(long id) {
+        return userRepository.findOneById(id);
+    }
 }

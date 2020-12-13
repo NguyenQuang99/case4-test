@@ -57,6 +57,7 @@ public class UserDetailsServiceImpl implements IUserService {
 //                user.getEncrytedPassword(), enabled, accountNonExpired, //
 //                credentialsNonExpired, accountNonLocked, grantList);
         myUser.setId(user.getId());
+        myUser.setImage(user.getImage());
         return myUser;
     }
 

@@ -18,6 +18,8 @@ public class MyUser extends User {
 
     private String fullName;
 
+    private String image;
+
     public Long getId() {
         return id;
     }
@@ -32,5 +34,13 @@ public class MyUser extends User {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

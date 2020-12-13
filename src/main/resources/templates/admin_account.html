@@ -18,7 +18,11 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.min.css">
 
+<!--<Switch Button>-->
+<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+<!--</Switch>-->
 
 </head>
 <body class="no-skin">
@@ -204,28 +208,34 @@
                                             <thead>
                                             <tr>
                                                 <th><input type="checkbox" id="checkAll"></th>
-                                                <th>Tên bài viết</th>
-                                                <th>Mô tả ngắn</th>
-                                                <th>Thao tác</th>
+                                                <th>Tên tài khoản</th>
+<!--                                                <th>Mật khẩu</th>-->
+                                                <th>Status</th>
+                                                <th>Vai trò</th>
+                                                <th>Ảnh đại diện</th>
+                                                <th>Chuyển trạng thái</th>
                                             </tr>
                                             </thead>
                                             <tbody>
 <!--                                            <c:forEach var="item" items="${model.listResult}">-->
-                                            <th:block th:each="item : ${model.listResult}">
+                                            <th:block th:each="item : ${userEntitys}">
                                                 <tr>
 <!--                                                    <td><input type="checkbox" id="checkbox_${item.id}" value="${item.id}"></td>-->
                                                     <td><input type="checkbox" id="checkbox_${item.id}" th:value="${item.id}" }}></td>
 <!--                                                    <td>${item.title}</td>-->
-                                                    <td><span th:text="${item.title}"/></td>
-                                                    <td><span th:text="${item.shortDescription}"/></td>
-                                                    <td>
+                                                    <td><span th:text="${item.userName}"/></td>
+<!--                                                    <td><span th:text="${item.encrytedPassword}"/></td>-->
+                                                    <td><span th:text="${item.active}"/></td>
+                                                    <td><span th:text="${item.userRole}"/></td>
+                                                    <td><img style="width: 50px; height: 50px" th:src="${item.image}"></td>
+
 <!--                                                        <c:url var="updateNewURL" value="/quan-tri/bai-viet/chinh-sua">-->
 <!--                                                            <c:param name="id" value="${item.id}"/>-->
 <!--                                                        </c:url>-->
-                                                        <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
-                                                           title="Cập nhật bài viết" th:href="@{/quan-tri/bai-viet/chinh-sua(id=${item.id})}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </a>
-
+                                                    <td>
+<!--                                                        <input type="button" th:href="@{/tai-khoan/trang-thai/{id}(id=${item.id})}" checked data-toggle="toggle" data-size="sm">-->
+<!--                                                        <input type="button" th:href="@{/tai-khoan/trang-thai/{id}(id=${item.id})}" class="btn btn-primary">Primary</input>-->
+                                                        <a th:href="@{/tai-khoan/trang-thai/{id}(id=${item.id})}">Change</a>
                                                     </td>
                                                 </tr>
                                             </th:block>

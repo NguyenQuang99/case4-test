@@ -26,6 +26,7 @@
     <script type="text/javascript" th:src="@{/resources/ckeditor/adapters/jquery.js}"></script>
 
     <!--    <script type="text/javascript">-->
+
     <script type="text/javascript">
         $(function() {
             $("#shortDescription").ckeditor({
@@ -34,11 +35,26 @@
             });
         });
     </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#content").ckeditor({
+                toolbar : 'Basic',
+                uiColor : '#F7D358'
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#thumbnail").ckeditor({
+                toolbar : 'Basic',
+                uiColor : '#F7D358'
+            });
+        });
+    </script>
+
 <!--/ck editor-->
-
-
-
-
 
 
 </head>
@@ -47,7 +63,7 @@
 <div id="navbar" class="navbar navbar-default          ace-save-state">
     <div class="navbar-container ace-save-state" id="navbar-container">
         <div class="navbar-header pull-left">
-            <a href="#" class="navbar-brand">
+            <a th:href="@{/quan-tri/trang-chu}" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     Trang quản trị
@@ -60,17 +76,22 @@
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         Xin chao,   <span th:text="${fullName}"/>
                     </a>
-                <li class="light-blue dropdown-modal">
+                </li>
 
-<!--                    <a th:href="@{/thoat}">-->
-<!--                        <i class="ace-icon fa fa-power-off"></i>-->
-<!--                        Thoát-->
-<!--                    </a>-->
+                <li class="light-blue dropdown-modal">
+                    <a th:href="@{/tai-khoan/tao-moi}" >Đăng ký</a>
+                </li>
+
+                <li class="light-blue dropdown-modal">
+                    <a th:href="@{/trang-chu}" >Trang chủ</a>
+                </li>
+
+
+                <li class="light-blue dropdown-modal">
                     <a th:href="@{/thoat}">
                         <i class="ace-icon fa fa-power-off"></i>
                         Thoát
                     </a>
-                </li>
                 </li>
             </ul>
         </div>
@@ -120,20 +141,32 @@
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-list"></i>
                     <span class="menu-text"></span>
-                    Quản lý bài viết
+                    Quản trị trang web
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
                 <b class="arrow"></b>
+
                 <ul class="submenu">
                     <li>
                         <!--                        <a href='<c:url value="/quan-tri/bai-viet/danh-sach?page=1&limit=2"/>'>-->
-                        <a th:href="@{/quan-tri/bai-viet/danh-sach(page='1', limit='2')}">
+                        <a th:href="@{/quan-tri/bai-viet/danh-sach(page='1',limit='2')}">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            DS bài viết
+                            Quản lý bài viết
                         </a>
                         <b class="arrow"></b>
                     </li>
                 </ul>
+                <ul class="submenu">
+                    <li>
+                        <!--                        <a href='<c:url value="/quan-tri/bai-viet/danh-sach?page=1&limit=2"/>'>-->
+                        <a th:href="@{/tai-khoan}">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Quản lý tài khoản
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+
             </li>
         </ul>
         <div class="sidebar-toggle sidebar-collapse">
@@ -216,33 +249,28 @@
                                 <label class="col-sm-3 control-label no-padding-right" for="thumbnail"> Ảnh đại
                                     diện </label>
                                 <div class="col-sm-9">
-                                    <input type="file" class="col-xs-10 col-sm-5" th:field="*{thumbnail}" id="thumbnail" name="title"/>
+<!--                                    <input type="file" class="col-xs-10 col-sm-5" th:field="*{thumbnail}" id="thumbnail" name="thumbnail"/>-->
+                                    <textarea class="form-control" rows="5" cols="10" name="thumbnail" id="thumbnail" th:field="*{thumbnail}"  />
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label for="shortDescription" class="col-sm-3 control-label no-padding-right">Mô tả
-                                    ngắn</label>
-<!--                                <div class="col-sm-9">-->
-<!--&lt;!&ndash;                                    <%&#45;&#45;                                <textarea class="form-control" rows="5" cols="10" id="shortDescription"&#45;&#45;%>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <%&#45;&#45;                                          name="shortDescription">${model.shortDescription}</textarea>&#45;&#45;%>&ndash;&gt;-->
-<!--                                    <textarea class="form-control" rows="5" cols="10" th:field="*{shortDescription}"-->
-<!--                                                   id="shortDescription" name="shortDescription"/>-->
-<!--                                </div> -->
+                                <label for="shortDescription" class="col-sm-3 control-label no-padding-right">Mô tả ngắn</label>
                                 <div class="col-sm-9">
-<!--                                    <%&#45;&#45;                                <textarea class="form-control" rows="5" cols="10" id="shortDescription"&#45;&#45;%>-->
-<!--                                    <%&#45;&#45;                                          name="shortDescription">${model.shortDescription}</textarea>&#45;&#45;%>-->
-                                    <textarea cols="60" rows="8" name="shortDescription" id="shortDescription" th:field="*{shortDescription}"  />
+                                    <textarea  class="form-control" rows="5" cols="10" th:field="*{shortDescription}" id="shortDescription" name="shortDescription"/>
                                 </div>
 
                             </div>
+
                             <div class="form-group">
                                 <label for="content" class="col-sm-3 control-label no-padding-right">Nội dung</label>
                                 <div class="col-sm-9">
-<!--                                    <%&#45;&#45;                                <textarea class="form-control" rows="5" cols="10" id="content"&#45;&#45;%>-->
-<!--                                    <%&#45;&#45;                                          name="content">${model.content}</textarea>&#45;&#45;%>-->
-                                    <textarea class="form-control" rows="5" cols="10" th:field="*{content}" id="content" name="content"/>
+                                    <textarea  class="form-control" rows="5" cols="10" th:field="*{content}" id="content" name="content"/>
                                 </div>
                             </div>
+
+
+
                             <input type="hidden" th:field="*{id}" id="newId" />
                             <div class="clearfix form-actions">
                                 <div class="col-md-offset-3 col-md-9">

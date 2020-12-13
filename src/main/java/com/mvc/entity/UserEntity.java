@@ -1,5 +1,7 @@
 package com.mvc.entity;
 
+import com.mvc.service.impl.AccountService;
+import com.sun.istack.NotNull;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -8,7 +10,7 @@ import javax.persistence.*;
 
 @Entity
 
-@Table(name = "Accounts")
+@Table(name = "Accounts", uniqueConstraints = @UniqueConstraint(columnNames = {"User_Name"}))
 @Data
 public class UserEntity implements Serializable {
 
@@ -21,7 +23,7 @@ public class UserEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @NotNull
     @Column(name = "User_Name", length = 20, nullable = false)
     private String userName;
 
