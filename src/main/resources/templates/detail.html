@@ -48,6 +48,11 @@
 <!--                </th:block>-->
 
                 <!--                                </c:forEach>-->
+                <th:block th:each="item : ${menu}">
+                    <li class="nav-item active"><a class="nav-link" th:href="@{'/trang-chu/' + ${item}}"><span th:utext="${item}">
+                        <span class="sr-only">(current)</span>
+                    </a></li>
+                </th:block>
                 <th:block th:if="${fullName}">
                     <li class="nav-item"><a class="nav-link" href="#">Welcome <span th:text="${fullName}"></span></a></li>
                     <li class="nav-item"><a class="nav-link" th:href="@{/thoat}" >Thoát</a></li>
@@ -57,7 +62,9 @@
                     <li class="nav-item"><a class="nav-link" href="#">Đăng ký</a></li>
                 </th:block>
 
-
+                <li class="nav-item active">
+                    <img style="width: 42px; height: 42px; border-radius: 50%" th:src="@{'http://localhost:8080/' + ${image}}">
+                </li>
             </ul>
 
         </div>

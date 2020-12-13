@@ -60,6 +60,14 @@
                             Thoát
                         </a>
                     </li>
+
+                    <li class="light-blue dropdown-modal">
+                    <th:block th:each="item : ${userEntitys}">
+                        <th:block th:if="${item.getUserName() == fullName }">
+                            <img style="width: 42px; height: 42px; border-radius: 50%" th:src="${item.image}">
+                        </th:block>
+                    </th:block>
+                    </li>
                 </ul>
             </ul>
         </div>
@@ -173,15 +181,6 @@
                                 <div class="table-btn-controls">
                                     <div class="pull-right tableTools-container">
                                         <div class="dt-buttons btn-overlap btn-group">
-<!--                                            <c:url var="createNewUrl" value="/quan-tri/bai-viet/chinh-sua" />-->
-
-<!--                                            <a flag="info"-->
-<!--                                               class="dt-button buttons-colvis btn btn-white btn-primary btn-bold" data-toggle="tooltip"-->
-<!--                                               title='Thêm bài viết' href='${createNewUrl}'>-->
-<!--															<span>-->
-<!--																<i class="fa fa-plus-circle bigger-110 purple"></i>-->
-<!--															</span>-->
-<!--                                            </a>   -->
                                             <a flag="info"
                                                class="dt-button buttons-colvis btn btn-white btn-primary btn-bold" data-toggle="tooltip"
                                                title='Thêm bài viết' th:href="@{/quan-tri/bai-viet/chinh-sua}">

@@ -41,6 +41,7 @@ public class HomeController {
             mav.addObject("fullName", RoleUtil.checkRole().get(0));
             mav.addObject("author", RoleUtil.checkRole().get(1));
             mav.addObject("userId",RoleUtil.checkRole().get(2));
+            mav.addObject("image", RoleUtil.checkRole().get(3));
             if(!accountService.findOneById(SecurityUtils.getPrincipal().getId()).isActive()) {
                 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
                 if (auth != null) {
@@ -63,6 +64,7 @@ public class HomeController {
             mav.addObject("fullName", RoleUtil.checkRole().get(0));
             mav.addObject("author", RoleUtil.checkRole().get(1));
             mav.addObject("userId",RoleUtil.checkRole().get(2));
+            mav.addObject("image", RoleUtil.checkRole().get(3));
         }
         model.setListResult(newService.getAllByCategory(code));
         mav.addObject("model", model);

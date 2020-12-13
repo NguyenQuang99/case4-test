@@ -46,6 +46,7 @@ public class NewController {
             mav.addObject("fullName", RoleUtil.checkRole().get(0));
             mav.addObject("author", RoleUtil.checkRole().get(1));
             mav.addObject("userId",RoleUtil.checkRole().get(2));
+            mav.addObject("image", RoleUtil.checkRole().get(3));
         }
         mav.addObject("model", model);
         return mav;

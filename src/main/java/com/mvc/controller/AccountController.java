@@ -34,16 +34,17 @@ public class AccountController {
 
     @GetMapping
     public ModelAndView home(HttpServletRequest request, HttpServletResponse response) {
-        ModelAndView modelAndView = new ModelAndView("admin_account");
+        ModelAndView mav = new ModelAndView("admin_account");
         List<UserEntity> userEntities = (List<UserEntity>) accountService.findAll();
-        modelAndView.addObject("userEntitys", userEntities);
-        modelAndView.addObject("message", "Thanh cong");
+        mav.addObject("userEntitys", userEntities);
+        mav.addObject("message", "Thanh cong");
         if(RoleUtil.checkRole().size() > 0) {
-            modelAndView.addObject("fullName", RoleUtil.checkRole().get(0));
-            modelAndView.addObject("author", RoleUtil.checkRole().get(1));
-            modelAndView.addObject("userId",RoleUtil.checkRole().get(2));
+            mav.addObject("fullName", RoleUtil.checkRole().get(0));
+            mav.addObject("author", RoleUtil.checkRole().get(1));
+            mav.addObject("userId",RoleUtil.checkRole().get(2));
+            mav.addObject("image", RoleUtil.checkRole().get(3));
         }
-        return modelAndView;
+        return mav;
     }
 
     @GetMapping("/tao-moi")
