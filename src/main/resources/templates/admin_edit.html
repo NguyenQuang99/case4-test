@@ -254,14 +254,14 @@
                                     diện </label>
                                 <div class="col-sm-9">
 <!--                                    <input type="file" class="col-xs-10 col-sm-5" th:field="*{thumbnail}" id="thumbnail" name="thumbnail"/>-->
-                                    <textarea class="form-control" rows="5" cols="10" name="thumbnail" id="thumbnail" th:field="*{thumbnail}"  />
+                                    <textarea class="form-control" rows="5" cols="10" th:field="*{thumbnail}" id="thumbnail"  name="thumbnail"   />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="shortDescription" class="col-sm-3 control-label no-padding-right">Mô tả ngắn</label>
                                 <div class="col-sm-9">
-                                    <textarea  class="form-control" rows="5" cols="10" th:field="*{shortDescription}" id="shortDescription" name="shortDescription"/>
+                                    <textarea  class="form-control" rows="2" cols="10" th:field="*{shortDescription}" id="shortDescription" name="shortDescription"/>
                                 </div>
 
                             </div>
@@ -269,7 +269,7 @@
                             <div class="form-group">
                                 <label for="content" class="col-sm-3 control-label no-padding-right">Nội dung</label>
                                 <div class="col-sm-9">
-                                    <textarea  class="form-control" rows="5" cols="10" th:field="*{content}" id="content" name="content"/>
+                                    <textarea  class="form-control" rows="30" cols="10" th:field="*{content}" id="content" name="content"/>
                                 </div>
                             </div>
 
@@ -369,7 +369,7 @@
             var shortDescription = $("#shortDescription").val();
             var content = $("#content").val();
             var id = $("#newId").val();
-            var json = {"id": id, "categoryCode": categoryCode, "title": title, "thumnail": thumbnail, "shortDescription": shortDescription, "content": content};
+            var json = {"id": id, "categoryCode": categoryCode, "title": title, "thumbnail": thumbnail, "shortDescription": shortDescription, "content": content};
 
 
             if (id == "") {
