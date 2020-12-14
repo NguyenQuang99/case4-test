@@ -33,7 +33,7 @@ public class HomeController {
     @RequestMapping(value = "/trang-chu")
     public ModelAndView homePage(HttpServletRequest request, HttpServletResponse response) {
 
-            ModelAndView mav = new ModelAndView("home");
+            ModelAndView mav = new ModelAndView("blog");
 
         NewDTO model = new NewDTO();
         model.setListResult(newService.findAll());
@@ -58,7 +58,7 @@ public class HomeController {
 
     @RequestMapping(value = "/trang-chu/{code}", method = RequestMethod.GET)
     public ModelAndView sortNew(@PathVariable("code") String code, HttpServletRequest request, HttpServletResponse response) {
-        ModelAndView mav = new ModelAndView("home");
+        ModelAndView mav = new ModelAndView("blog");
         NewDTO model = new NewDTO();
         if(RoleUtil.checkRole().size() > 0) {
             mav.addObject("fullName", RoleUtil.checkRole().get(0));
@@ -80,6 +80,61 @@ public class HomeController {
         ModelAndView mav = new ModelAndView("login");
         return mav;
     }
+    @RequestMapping(value = "/dang-ky", method = RequestMethod.GET)
+    public ModelAndView signUp(){
+        ModelAndView mav = new ModelAndView("sign_up");
+        return mav;
+    }
+    @RequestMapping(value = "/Contact_us", method = RequestMethod.GET)
+    public ModelAndView contact(){
+        ModelAndView mav = new ModelAndView("Contact_us");
+        return mav;
+    }
+    @RequestMapping(value = "/single", method = RequestMethod.GET)
+    public ModelAndView single(){
+        ModelAndView mav = new ModelAndView("single");
+        return mav;
+    }
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public ModelAndView index(){
+        ModelAndView mav = new ModelAndView("index");
+        return mav;
+    }
+    @RequestMapping(value = "/chuyen_la", method = RequestMethod.GET)
+    public ModelAndView chuyen_la(){
+        ModelAndView mav = new ModelAndView("chuyen_la");
+        return mav;
+    }
+    @RequestMapping(value = "/doi_song", method = RequestMethod.GET)
+    public ModelAndView doi_song(){
+        ModelAndView mav = new ModelAndView("doi_song");
+        return mav;
+    }
+    @RequestMapping(value = "/gia_dinh", method = RequestMethod.GET)
+    public ModelAndView gia_dinh(){
+        ModelAndView mav = new ModelAndView("gia_dinh");
+        return mav;
+    }
+    @RequestMapping(value = "/kinh_te", method = RequestMethod.GET)
+    public ModelAndView kinh_te(){
+        ModelAndView mav = new ModelAndView("kinh_te");
+        return mav;
+    }
+    @RequestMapping(value = "/quan_su", method = RequestMethod.GET)
+    public ModelAndView quan_su(){
+        ModelAndView mav = new ModelAndView("quan_su");
+        return mav;
+    }
+    @RequestMapping(value = "/the_thao", method = RequestMethod.GET)
+    public ModelAndView the_thao(){
+        ModelAndView mav = new ModelAndView("the_thao");
+        return mav;
+    }
+
+
+
+
+
 
     @RequestMapping(value = "/thoat", method = RequestMethod.GET)
     public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) {

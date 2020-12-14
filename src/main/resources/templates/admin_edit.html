@@ -27,14 +27,14 @@
 
     <!--    <script type="text/javascript">-->
 
-    <script type="text/javascript">
-        $(function() {
-            $("#shortDescription").ckeditor({
-                toolbar : 'Basic',
-                uiColor : '#F7D358'
-            });
-        });
-    </script>
+<!--    <script type="text/javascript">-->
+<!--        $(function() {-->
+<!--            $("#shortDescription").ckeditor({-->
+<!--                toolbar : 'Basic',-->
+<!--                uiColor : '#F7D358'-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
 
     <script type="text/javascript">
         $(function() {
@@ -246,7 +246,7 @@
                                     viết </label>
                                 <div class="col-sm-9">
 <!--                                    <%&#45;&#45; <input type="text" class="col-xs-10 col-sm-5" id="title" name="title" value="${model.title}"/>&#45;&#45;%>-->
-                                    <input class="col-xs-10 col-sm-5" type="text" th:field="*{title}" id="title" name="title"/>
+                                    <input class="col-xs-10 col-sm-5" type="text" th:field="*{title}" id="title" name="title" style="width: 100%; height: 60px"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -261,7 +261,8 @@
                             <div class="form-group">
                                 <label for="shortDescription" class="col-sm-3 control-label no-padding-right">Mô tả ngắn</label>
                                 <div class="col-sm-9">
-                                    <textarea  class="form-control" rows="2" cols="10" th:field="*{shortDescription}" id="shortDescription" name="shortDescription"/>
+<!--                                    <textarea  class="form-control" rows="2" cols="10" th:field="*{shortDescription}" id="shortDescription" name="shortDescription"/>-->
+                                    <input class="col-xs-10 col-sm-5" type="text" th:field="*{shortDescription}" id="shortDescription" name="shortDescription" style="width: 100%; height: 60px"/>
                                 </div>
 
                             </div>

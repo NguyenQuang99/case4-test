@@ -37,7 +37,7 @@ public class NewController {
 
     @RequestMapping(value = "/trang-chu/noi-dung/{id}", method = RequestMethod.GET)
     public ModelAndView detail(@PathVariable("id") long id, HttpServletRequest request, HttpServletResponse response) {
-        ModelAndView mav = new ModelAndView("detail");
+        ModelAndView mav = new ModelAndView("binh-luan");
         CommentDTO model = new CommentDTO();
         NewDTO newDTO = newService.findById(id);
         mav.addObject("newDTO", newDTO);

@@ -173,13 +173,14 @@
         <div class="row">
             <div class="col-12 fh5co_mediya_center"><a href="#" class="color_fff fh5co_mediya_setting"><i
                     class="fa fa-clock-o"></i>
-                <p id="hvn"></p></a>
+                <p id="hvn"></p>
+            </a>
                 <div class="d-inline-block fh5co_trading_posotion_relative"><a href="#" class="treding_btn">Thịnh
                     Hành</a>
                     <div class="fh5co_treding_position_absolute"></div>
                 </div>
                 <a href="#" class="color_fff fh5co_mediya_setting">Cập nhật nhanh nhất tin tức thịnh hành trên toàn thế
-                    giớ</a>
+                    giới</a>
             </div>
         </div>
     </div>
@@ -412,8 +413,8 @@
 
 			</span>
                     <span class="be-comment-time">
-				<i class="fa fa-clock-o" ></i>
-                        <span id="hvn"></span>
+				<i class="fa fa-clock-o" id="result"></i>
+
 
 			</span>
                     <p class="be-comment-text" th:text="${item.comment}">
@@ -537,6 +538,18 @@
     var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
     document.getElementById("hvn").innerHTML = date;
 
+</script>
+<script>
+    var date = new Date();
+    var data = 'December'+ today.getDate()+ 'at'+ today.getHours() +':' + today.getMinutes() + ':' + today.getSeconds();
+    // var data = 'Ngày trong tháng: ' + date.getDate() + '<br />';
+    // data += 'Ngày trong tuần: ' + date.getDay() + '<br />';
+    // data += 'Tháng trong năm: ' + date.getMonth() + '<br />';
+    // data += 'Năm đầy đủ: ' + date.getFullYear() + '<br />';
+    // data += 'Giờ: ' + date.getHours() + '<br />';
+    // data += 'Phút: ' + date.getMinutes() + '<br />';
+    // data += 'Giây: ' + date.getSeconds() + '<br />';
+    document.getElementById('result').innerHTML = data;
 </script>
 
 
