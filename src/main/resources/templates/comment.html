@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>24 News — Website tin tức cập nhật liên tục</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<!--    <link th:href="@{/comment/css/comment.css}" rel="stylesheet" type="text/css"/>-->
+    <link th:href="@{/home/css/media_query.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/home/css/bootstrap.css}" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link th:href="@{/home/css/animate.css}" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link th:href="@{/home/css/owl.carousel.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/home/css/owl.theme.default.css}" rel="stylesheet" type="text/css"/>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+     Bootstrap CSS
+    <link th:href="@{/home/css/style_1.css}" rel="stylesheet" type="text/css"/>
+    <!-- Modernizr JS -->
+    <script th:src="@{/home/js/modernizr-3.5.0.min.js}"></script>
+    <style type="text/css">
+        body{
+            margin-top:20px;
+            background-color:#e9ebee;
+        }
+
+        .be-comment-block {
+            margin-bottom: 50px !important;
+            border: 1px solid #edeff2;
+            border-radius: 2px;
+            padding: 50px 70px;
+            border:1px solid #ffffff;
+        }
+
+        .comments-title {
+            font-size: 16px;
+            color: #262626;
+            margin-bottom: 15px;
+            font-family: 'Conv_helveticaneuecyr-bold';
+        }
+
+        .be-img-comment {
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin-bottom: 15px;
+        }
+
+        .be-ava-comment {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .be-comment-content {
+            margin-left: 80px;
+        }
+
+        .be-comment-content span {
+            display: inline-block;
+            width: 49%;
+            margin-bottom: 15px;
+        }
+
+        .be-comment-name {
+            font-size: 13px;
+            font-family: 'Conv_helveticaneuecyr-bold';
+        }
+
+        .be-comment-content a {
+            color: #383b43;
+        }
+
+        .be-comment-content span {
+            display: inline-block;
+            width: 49%;
+            margin-bottom: 15px;
+        }
+
+        .be-comment-time {
+            text-align: right;
+        }
+
+        .be-comment-time {
+            font-size: 11px;
+            color: #b4b7c1;
+        }
+
+        .be-comment-text {
+            font-size: 13px;
+            line-height: 18px;
+            color: #7a8192;
+            display: block;
+            background: #f6f6f7;
+            border: 1px solid #edeff2;
+            padding: 15px 20px 20px 20px;
+        }
+
+        .form-group.fl_icon .icon {
+            position: absolute;
+            top: 1px;
+            left: 16px;
+            width: 48px;
+            height: 48px;
+            background: #f6f6f7;
+            color: #b5b8c2;
+            text-align: center;
+            line-height: 50px;
+            -webkit-border-top-left-radius: 2px;
+            -webkit-border-bottom-left-radius: 2px;
+            -moz-border-radius-topleft: 2px;
+            -moz-border-radius-bottomleft: 2px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+
+        .form-group .form-input {
+            font-size: 13px;
+            line-height: 50px;
+            font-weight: 400;
+            color: #b4b7c1;
+            width: 100%;
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid #edeff2;
+            border-radius: 3px;
+        }
+
+        .form-group.fl_icon .form-input {
+            padding-left: 70px;
+        }
+
+        .form-group textarea.form-input {
+            height: 150px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+<div class="container-fluid fh5co_header_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 fh5co_mediya_center"><a href="https://lichvannien365.com/lich-am-duong" class="color_fff fh5co_mediya_setting"><i
+                    class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp;December 19, 2020</a>
+                <div class="d-inline-block fh5co_trading_posotion_relative"><a href="#" class="treding_btn">Thịnh Hành</a>
+                    <div class="fh5co_treding_position_absolute"></div>
+                </div>
+                <a href="#" class="color_fff fh5co_mediya_setting">Cập nhật nhanh nhất tin tức thịnh hành trên toàn thế giới</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 fh5co_padding_menu">
+                <img th:src="@{/home/images/logo.png}" alt="img" class="fh5co_logo_width"/>
+            </div>
+            <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div></a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div></a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div></a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a href="https://twitter.com/" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div></a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a href="https://www.facebook.com/tintuconlinevnn" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div></a>
+                </div>
+                <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
+                <div class="d-inline-block text-center dd_position_relative ">
+                    <select class="form-control fh5co_text_select_option">
+                        <option>Tiếng Việt</option>
+                        <option>English </option>
+                        <option>French </option>
+                        <option>German </option>
+                        <option>Spanish </option>
+                    </select>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-faded fh5co_padd_mediya padding_786">
+    <div class="container padding_786">
+        <nav class="navbar navbar-toggleable-md navbar-light ">
+            <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+            <a class="navbar-brand" href="#"><img th:src="@{/home/images/logo.png}" alt="img" class="mobile_logo_width"/></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/index}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/trang-chu}">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/single}">Single <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">World <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                            <a class="dropdown-item" href="#">Action in</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton3" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Community<span class="sr-only">(current)</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                            <a class="dropdown-item" href="#">Action in</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/Contact_us}">Contact <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!--                    <li class="nav-item ">-->
+                    <!--                        <a class="nav-link" th:href="@{/dang-nhap}">Login <span class="sr-only">(current)</span></a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="nav-item ">-->
+                    <!--                        <a class="nav-link" th:href="@{/dang-ki}">Signup<span class="sr-only">(current)</span></a>-->
+                    <!--                    </li>-->
+                    <th:block th:if="${fullName}">
+                        <li class="nav-item"><a class="nav-link" href="#">Welcome <span th:text="${fullName}"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/thoat}" >Thoát</a></li>
+                    </th:block>
+
+<!--                    <th:block th:unless="${fullName}">-->
+<!--                        <li class="nav-item"><a class="nav-link" th:href="@{/dang-nhap}">Đăng nhập</a></li>-->
+<!--                        <li class="nav-item"><a class="nav-link" th:href="@{/dang-ky}">Đăng ký</a></li>-->
+<!--                    </th:block>-->
+                    <li class="nav-item ">-->
+                        <a class="nav-link" href="#">Shop<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<p>
+    Dân trí Vụ kiện bầu cử của Texas nhằm vào 4 bang chiến trường tiếp tục nhận được sự ủng hộ với việc 6 bang khác đề nghị tham gia vào vụ kiện ở Tòa án Tối cao.
+    Thêm 6 bang đề nghị tham gia vào vụ kiện bầu cử của Texas - 1Nhấn để phóng to ảnh
+    Tổng chưởng lý Missouri Eric Schmitt dẫn đầu đại diện pháp lý của 6 bang đề nghị tham gia vụ kiện của Texas.(Ảnh: Fox News)
+
+    Theo Fox News, hôm 9/12, bang Missouri đã dẫn đầu nhóm 17 bang đã lên tiếng ủng hộ vụ Texas kiện quy trình bầu cử ở 4 bang chủ chốt Georgia, Michigan, Pennsylvania và Wisconsin.
+
+    Đến ngày 10/12, tổng chưởng lý Missouri Eric Schmitt tiếp tục củng cố sự ủng hộ này với việc dẫn đầu đại diện pháp lý của 5 bang khác gồm Arkansas, Utah, Louisiana, Mississippi và South Carolina gửi đơn đề nghị Tòa án Tối cao để được tham gia vào vụ kiện của Texas.
+
+    Đơn đề nghị được đưa ra chỉ một ngày sau khi đội ngũ pháp lý của Tổng thống Donald Trump cũng đưa ra đơn đề nghị can thiệp nhằm tiếp sức cho vụ kiện của Texas. "Các bang can thiệp không nghi ngờ rằng bang nguyên đơn Texas sẽ khiếu kiện mạnh mẽ và hiệu quả vụ này, nhưng tổng chưởng lý mỗi bang là lựa chọn tốt nhất để đại diện cho lợi ích của bang đó và người dân", 6 bang cho biết trong đơn đề nghị gửi Tòa án Tối cao.
+
+    Đơn đề nghị của 6 bang này cũng nói rằng, họ ủng hộ các lập luận của Texas cũng như của chiến dịch ông Trump rằng không chỉ các hành động của Georgia, Pennsylvania, Wisconsin và Michigan vi hiến mà rất có thể có gian lận bầu cử diện rộng.
+
+    Trong một động thái chưa từng có tiền lệ, tổng chưởng lý bang Texas đầu tuần này đã đâm đơn kiện lên Tòa án Tối cao khiếu nại việc giới chức Georgia, Pennsylvania, Wisconsin và Michigan sai phạm khi tự ý thay đổi nguyên tắc bầu cử, khuyến khích bỏ phiếu qua thư. Đây là các bang mà ứng viên tổng thống đảng Dân chủ Joe Biden giành chiến thắng.
+
+    Đơn kiện đòi hủy kết quả bầu cử ở 4 bang, cho phép cơ quan lập pháp ở 4 bang này (do đảng Cộng hòa kiểm soát) chỉ định đại cử tri, đồng nghĩa với việc ngăn các bang này bỏ phiếu trong đại cử tri đoàn. Ngoài ra, đơn kiện cũng đề nghị lùi ngày bỏ phiếu đại cử tri ra sau ngày 14/12.
+
+    Vụ kiện Texas đang kéo theo những phản ứng trái chiều. Trong khi vụ kiện nhận được sự ủng hộ của ít nhất 17 bang và hơn 100 nghị sĩ Cộng hòa, nó cũng vấp phải sự chỉ trích của đảng Dân chủ. Các bang bị kiện chỉ trích đây là một sự tấn công liều lĩnh vào nền Dân chủ Mỹ. Hiện chưa rõ Tòa án Tối cao có tiếp nhận vụ kiện hay không, nhưng giới chuyên gia cho rằng vụ kiện "chưa từng có tiền lệ này" khó đi xa vì không có cơ sở pháp lý và thực tiễn.
+
+    Tổng thống Donald Trump đến nay vẫn chưa công nhận chiến thắng của đối thủ Dân chủ Joe Biden dù truyền thông dự đoán ông Biden đắc cử với 306 phiếu đại cử tri, vượt ngưỡng 270 phiếu cần thiết để trở thành tổng thống. Hiện tất cả các bang của Mỹ đã hoàn tất xác nhận kết quả bỏ phiếu phổ thông để sẵn sàng cho việc chỉ định đại cử tri và bỏ phiếu đại cử tri vào ngày 14/12. Theo cơ chế bầu cử ở Mỹ, đại cử tri là những người trực tiếp bầu ra tổng thống.
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvjđsjdfsjd
+    dâdjadjadkas
+</p>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <div class="be-comment-block">
+        <h1 class="comments-title">Comments (3)</h1>
+        <div class="be-comment">
+            <div class="be-img-comment">
+                <a href="blog-detail-2.html">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
+                </a>
+            </div>
+            <div class="be-comment-content">
+
+				<span class="be-comment-name">
+					<a href="blog-detail-2.html">Ravi Sah</a>
+					</span>
+                <span class="be-comment-time">
+					<i class="fa fa-clock-o"></i>
+					May 27, 2015 at 3:14am
+				</span>
+
+                <p class="be-comment-text">
+                    Pellentesque gravida tristique ultrices.
+                    Sed blandit varius mauris, vel volutpat urna hendrerit id.
+                    Curabitur rutrum dolor gravida turpis tristique efficitur.
+                </p>
+            </div>
+        </div>
+        <div class="be-comment">
+            <div class="be-img-comment">
+                <a href="blog-detail-2.html">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="be-ava-comment">
+                </a>
+            </div>
+            <div class="be-comment-content">
+			<span class="be-comment-name">
+				<a href="blog-detail-2.html">Phoenix, the Creative Studio</a>
+			</span>
+                <span class="be-comment-time">
+				<i class="fa fa-clock-o"></i>
+				May 27, 2015 at 3:14am
+			</span>
+                <p class="be-comment-text">
+                    Nunc ornare sed dolor sed mattis. In scelerisque dui a arcu mattis, at maximus eros commodo. Cras magna nunc, cursus lobortis luctus at, sollicitudin vel neque. Duis eleifend lorem non ant. Proin ut ornare lectus, vel eleifend est. Fusce hendrerit dui in turpis tristique blandit.
+                </p>
+            </div>
+        </div>
+        <div class="be-comment">
+            <div class="be-img-comment">
+                <a href="blog-detail-2.html">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" class="be-ava-comment">
+                </a>
+            </div>
+            <div class="be-comment-content">
+			<span class="be-comment-name">
+				<a href="blog-detail-2.html">Cüneyt ŞEN</a>
+			</span>
+                <span class="be-comment-time">
+				<i class="fa fa-clock-o"></i>
+				May 27, 2015 at 3:14am
+			</span>
+                <p class="be-comment-text">
+                    Cras magna nunc, cursus lobortis luctus at, sollicitudin vel neque. Duis eleifend lorem non ant
+                </p>
+            </div>
+        </div>
+        <form class="form-block">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="form-group fl_icon">
+                        <div class="icon"><i class="fa fa-user"></i></div>
+                        <input class="form-input" type="text" placeholder="Your name">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 fl_icon">
+                    <div class="form-group fl_icon">
+                        <div class="icon"><i class="fa fa-envelope-o"></i></div>
+                        <input class="form-input" type="text" placeholder="Your email">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <textarea class="form-input" required="" placeholder="Your text"></textarea>
+                    </div>
+                </div>
+                <a class="btn btn-primary pull-right">submit</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+</script>
+
+
+
+
+
+
+
+
+<div class="container-fluid fh5co_footer_bg pb-3">
+    <div class="container animate-box">
+        <div class="row">
+            <div class="col-12 spdp_right py-5"><img th:src="@{/home/images/white_logo.png}" alt="img" class="footer_logo"/></div>
+            <div class="clearfix"></div>
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="footer_main_title py-3"> About</div>
+                <div class="footer_sub_about pb-3"> Chúng tôi là những thành viên làm case module 4 Java gồm:<br/>
+                    Bùi Xuân Vượng<br/>
+                    Phùng Tuấn Nghĩa<br/>
+                    Nguyễn Minh Quang
+                </div>
+                <div class="footer_mediya_icon">
+                    <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div>
+                    </a></div>
+                    <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div>
+                    </a></div>
+                    <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div>
+                    </a></div>
+                    <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div>
+                    </a></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-2">
+                <div class="footer_main_title py-3"> Category</div>
+                <ul class="footer_menu">
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Báo chí</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Thể thao</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Công nghệ</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Tuesday</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Thời trang</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Kinh tế</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Khoa học</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Thế giới</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-5 col-lg-3 position_footer_relative">
+                <div class="footer_main_title py-3"> Most Viewed Posts</div>
+                <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                <div class="footer_position_absolute"><img th:src="@{/home/images/footer_sub_tipik.png}" alt="img" class="width_footer_sub_img"/></div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4 ">
+                <div class="footer_main_title py-3">Tìm kiếm nhiều nhất</div>
+                <a href="https://www.youtube.com/watch?v=oEEG2wGWq44" class="footer_img_post_6"><img th:src="@{home/images/anh6.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=AOJKnxmY0VQ" class="footer_img_post_6"><img th:src="@{/home/images/anh7.jpeg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=CkxjR2fq7LU" class="footer_img_post_6"><img th:src="@{/home/images/anh8.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=n6PlOaqZKyA" class="footer_img_post_6"><img th:src="@{/home/images/anh9.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=VS2uSRQAbFw" class="footer_img_post_6"><img th:src="@{/home/images/anh10.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=xVSSrlEfu0g" class="footer_img_post_6"><img th:src="@{/home/images/anh11.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=n_QZ_vmNYa0" class="footer_img_post_6"><img th:src="@{/home/images/anh12.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=Bhg-Gw953b0" class="footer_img_post_6"><img th:src="@{/home/images/anh13.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=y_6aSG2yfe8" class="footer_img_post_6"><img th:src="@{/home/images/anh14.jpg}" alt="img"/></a>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-2 pb-4">
+            <div class="col-12 col-md-8 col-lg-7 ">
+                <div class="input-group">
+                    <span class="input-group-addon fh5co_footer_text_box" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                    <input type="text" class="form-control fh5co_footer_text_box" placeholder="Enter your email..." aria-describedby="basic-addon1">
+                    <a href="#" class="input-group-addon fh5co_footer_subcribe" id="basic-addon12"> <i class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid fh5co_footer_right_reserved">
+    <div class="container">
+        <div class="row  ">
+            <div class="col-12 col-md-6 py-4 Reserved"> © Nhóm 3 thành viên VQN <a href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F" title="Free HTML5 Bootstrap templates">Case module 4</a>. </div>
+            <div class="col-12 col-md-6 spdp_right py-4">
+                <a href="blog.html" class="footer_last_part_menu">Home</a>
+                <a href="Contact_us.html" class="footer_last_part_menu">About</a>
+                <a href="Contact_us.html" class="footer_last_part_menu">Contact</a>
+                <a href="blog.html" class="footer_last_part_menu">Latest News</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script th:src="@{/home/js/owl.carousel.min.js}"></script>
+<!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<!-- Waypoints -->
+<script th:src="@{/home/js/jquery.waypoints.min.js}"></script>
+<!-- Main -->
+<script th:src="@{/home/js/main.js}"></script>
+
+</body>
+</html>

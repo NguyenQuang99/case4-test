@@ -1,48 +1,175 @@
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link th:href="@{/login/style.css}" rel="stylesheet" type="text/css" media="all"/>
-
+    <link th:href="@{/template/login/style.css}" rel="stylesheet" type="text/css" media="all"/>
 </head>
 <body id="LoginForm">
-
 <div class="container">
     <!-- <h1 class="form-heading">login Form</h1> -->
     <div class="login-form">
         <div class="main-div">
-<!--            <c:if test="${param.incorrectAccount != null}">-->
+            <!--            <c:if test="${param.incorrectAccount != null}">-->
             <div th:if="${param.incorrectAccount}" >
                 <div class="alert alert-danger">
                     Username or password incorrect
                 </div>
             </div>
-<!--            </c:if>-->
-
-<!--            <c:if test="${param.accessDenied != null}">-->
+            <!--            </c:if>-->
+            <!--            <c:if test="${param.accessDenied != null}">-->
             <div th:if="${param.accessDenied}">
                 <div class="alert alert-danger">
                     You not authorize
                 </div>
             </div>
-<!--            </c:if>-->
-            <form  th:action="@{/j_spring_security_check}" id="formLogin" method="post">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="userName" name="userName" placeholder="Tên đăng nhập">
-                </div>
-
-                <div class="form-group">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">
-                </div>
-                <button type="submit" class="btn btn-primary" >Đăng nhập</button>
+            <!--            </c:if>-->
+            <form th:action="@{/j_spring_security_check}" id="formLogin" method="post">
+                <section class="login-block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 login-sec">
+                                <h2 class="text-center">Login Now</h2>
+                                <form class="login-form">
+                                    <div class="form-group">
+                                        <label  class="text-uppercase">Username</label>
+<!--                                        <input type="text" class="form-control" id="userName" name="j_username" placeholder="Tên đăng nhập">-->
+                                        <input type="text" class="form-control" id="userName" name="userName" placeholder="Tên đăng nhập">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-uppercase">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            <small>Remember Me</small>
+                                        </label>
+                                        <button type="submit" class="btn btn-login float-right">Đăng Nhập</button>
+                                    </div>
+                                </form>
+                                <div class="copy-text">Created with <i class="fa fa-heart"></i> by <a href="http://grafreez.com">Grafreez.com</a></div>
+                            </div>
+                            <div class="col-md-8 banner-sec">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg" alt="First slide">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <div class="banner-text">
+                                                    <h2>This is Heaven</h2>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block img-fluid" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="First slide">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <div class="banner-text">
+                                                    <h2>This is Heaven</h2>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <div class="banner-text">
+                                                    <h2>This is Heaven</h2>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </form>
         </div>
     </div>
 </div>
-
 </body>
+<style>
+    @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+    .login-block{
+        background: #5773c6;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #4989ab, #5c6bc8);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #3d6c9f, #6294de); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        float:left;
+        width:100%;
+        padding : 50px 0;
+    }
+    .banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+    .container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+    .carousel-inner{border-radius:0 10px 10px 0;}
+    .carousel-caption{text-align:left; left:5%;}
+    .login-sec{padding: 50px 30px; position:relative;}
+    .login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+    .login-sec .copy-text i{color: #8af4fe;}
+    .login-sec .copy-text a{color: #6282e3;}
+    .login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #62acde;}
+    .login-sec h2:after{content:" "; width:100px; height:5px; background: #8aabfe; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+    .btn-login{background: #62a4de; color: #ffffff; font-weight:600;}
+    .banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+    .banner-text h2{color: #ffffff; font-weight:600;}
+    .banner-text h2:after{content:" "; width:100px; height:5px; background: #ffffff; display:block; margin-top:20px; border-radius:3px;}
+    .banner-text p{color: #ffffff;}
+</style>
 </html>
 
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org/">-->
+<!--<head>-->
+<!--    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--    <link th:href="@{/login/style.css}" rel="stylesheet" type="text/css" media="all"/>-->
 
+<!--</head>-->
+<!--<body id="LoginForm">-->
+
+<!--<div class="container">-->
+<!--    &lt;!&ndash; <h1 class="form-heading">login Form</h1> &ndash;&gt;-->
+<!--    <div class="login-form">-->
+<!--        <div class="main-div">-->
+<!--            &lt;!&ndash;            <c:if test="${param.incorrectAccount != null}">&ndash;&gt;-->
+<!--            <div th:if="${param.incorrectAccount}" >-->
+<!--                <div class="alert alert-danger">-->
+<!--                    Username or password incorrect-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash;            </c:if>&ndash;&gt;-->
+
+<!--            &lt;!&ndash;            <c:if test="${param.accessDenied != null}">&ndash;&gt;-->
+<!--            <div th:if="${param.accessDenied}">-->
+<!--                <div class="alert alert-danger">-->
+<!--                    You not authorize-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash;            </c:if>&ndash;&gt;-->
+<!--            <form  th:action="@{/j_spring_security_check}" id="formLogin" method="post">-->
+<!--                <div class="form-group">-->
+<!--                    <input type="text" class="form-control" id="userName" name="userName" placeholder="Tên đăng nhập">-->
+<!--                </div>-->
+
+<!--                <div class="form-group">-->
+<!--                    <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">-->
+<!--                </div>-->
+<!--                <button type="submit" class="btn btn-primary" >Đăng nhập</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->

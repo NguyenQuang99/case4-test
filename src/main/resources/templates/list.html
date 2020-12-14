@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tasks</h1>
+<table border="1px">
+    <thead>
+    <tr>
+        <th>
+            User Name
+        </th>
+        <th>
+            Password
+        </th>
+
+        <th>
+            Active
+        </th>
+        <th>
+            User Role
+        </th>
+        <th>
+            Image
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="userEntity: ${userEntitys}">
+        <td th:text="${userEntity.userName}"></td>
+        <td th:text="${userEntity.encrytedPassword}"></td>
+        <td th:text="${userEntity.active}"></td>
+        <td th:text="${userEntity.userRole}"></td>
+        <td>
+            <img th:src="${userEntity.image}">
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

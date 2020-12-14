@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--
+	24 News by FreeHTML5.co
+	Twitter: https://twitter.com/fh5co
+	Facebook: https://fb.com/fh5co
+	URL: https://freehtml5.co
+-->
+<html lang="en" class="no-js">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>24 News — Free Website Template, Free HTML5 Template by FreeHTML5.co</title>
+    <link th:href="@{/home/js/main.js}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/home/css/bootstrap.css}" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link th:href="@{/home/css/animate.css}" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link th:href="@{/home/css/owl.carousel.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/home/css/owl.theme.default.css}" rel="stylesheet" type="text/css"/>
+    <!-- Bootstrap CSS -->
+    <link th:href="@{/home/css/style_1.css}" rel="stylesheet" type="text/css"/>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Modernizr JS -->
+    <script th:src="@{/home/js/modernizr-3.5.0.min.js}"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <!-- detail-->
+    <link rel="stylesheet" type="text/css" th:href="@{/admin/assets/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/admin/font-awesome/4.5.0/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/admin/assets/css/ace.min.css}" class="ace-main-stylesheet"
+          id="main-ace-style"/>
+    <script th:src="@{/admin/assets/js/ace-extra.min.js}"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript' th:src="@{/admin/js/jquery-2.2.3.min.js}"></script>
+    <script th:src="@{/admin/assets/js/jquery.2.1.1.min.js}"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--    link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">-->
+
+    <!--   /detail -->
+
+    <style type="text/css">
+        body {
+            margin-top: 20px;
+            background-color: #e9ebee;
+        }
+
+        .be-comment-block {
+            margin-bottom: 50px !important;
+            border: 1px solid #edeff2;
+            border-radius: 2px;
+            padding: 50px 70px;
+            border: 1px solid #ffffff;
+        }
+
+        .comments-title {
+            font-size: 16px;
+            color: #262626;
+            margin-bottom: 15px;
+            font-family: 'Conv_helveticaneuecyr-bold';
+        }
+
+        .be-img-comment {
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin-bottom: 15px;
+        }
+
+        .be-ava-comment {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .be-comment-content {
+            margin-left: 60px;
+        }
+
+        .be-comment-content span {
+            display: inline-block;
+            width: 49%;
+            margin-bottom: 15px;
+        }
+
+        .be-comment-name {
+            font-size: 13px;
+            font-family: 'Conv_helveticaneuecyr-bold';
+        }
+
+        .be-comment-content a {
+            color: #383b43;
+        }
+
+        .be-comment-content span {
+            display: inline-block;
+            width: 49%;
+            margin-bottom: 15px;
+        }
+
+        .be-comment-time {
+            text-align: right;
+        }
+
+        .be-comment-time {
+            font-size: 11px;
+            color: #b4b7c1;
+        }
+
+        .be-comment-text {
+            font-size: 13px;
+            line-height: 18px;
+            color: #7a8192;
+            display: block;
+            background: #f6f6f7;
+            border: 1px solid #edeff2;
+            padding: 15px 20px 20px 20px;
+        }
+
+        .form-group.fl_icon .icon {
+            position: absolute;
+            top: 1px;
+            left: 16px;
+            width: 48px;
+            height: 48px;
+            background: #f6f6f7;
+            color: #b5b8c2;
+            text-align: center;
+            line-height: 50px;
+            -webkit-border-top-left-radius: 2px;
+            -webkit-border-bottom-left-radius: 2px;
+            -moz-border-radius-topleft: 2px;
+            -moz-border-radius-bottomleft: 2px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+
+        .form-group .form-input {
+            font-size: 13px;
+            line-height: 50px;
+            font-weight: 400;
+            color: #b4b7c1;
+            width: 100%;
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid #edeff2;
+            border-radius: 3px;
+        }
+
+        .form-group.fl_icon .form-input {
+            padding-left: 40px;
+        }
+
+        .form-group textarea.form-input {
+            height: 70px;
+        }
+
+    </style>
+
+</head>
+<body class="single">
+<div class="container-fluid fh5co_header_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 fh5co_mediya_center"><a href="#" class="color_fff fh5co_mediya_setting"><i
+                    class="fa fa-clock-o"></i>
+                <p id="hvn"></p></a>
+                <div class="d-inline-block fh5co_trading_posotion_relative"><a href="#" class="treding_btn">Thịnh
+                    Hành</a>
+                    <div class="fh5co_treding_position_absolute"></div>
+                </div>
+                <a href="#" class="color_fff fh5co_mediya_setting">Cập nhật nhanh nhất tin tức thịnh hành trên toàn thế
+                    giớ</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 fh5co_padding_menu">
+                <img th:src="@{/home/images/logo.png}" alt="img" class="fh5co_logo_width"/>
+            </div>
+            <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div>
+                    </a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div>
+                    </a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div>
+                    </a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a href="https://twitter.com/" target="_blank" class="fh5co_display_table">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div>
+                    </a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a href="https://fb.com/tintuconlinevnn" target="_blank" class="fh5co_display_table">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div>
+                    </a>
+                </div>
+                <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
+                <div class="d-inline-block text-center dd_position_relative ">
+                    <select class="form-control fh5co_text_select_option">
+                        <option>Tiếng Việt</option>
+                        <option>English</option>
+                        <option>French</option>
+                        <option>German</option>
+                        <option>Spanish</option>
+                    </select>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-faded fh5co_padd_mediya padding_786">
+    <div class="container padding_786">
+        <nav class="navbar navbar-toggleable-md navbar-light ">
+            <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+            <a class="navbar-brand" href="#"><img th:src="@{/home/images/logo.png}" alt="img"
+                                                  class="mobile_logo_width"/></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/index}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/trang-chu}">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/single}">Single <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">World <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                            <a class="dropdown-item" th:href="@{/kinh_te}">Kinh tế</a>
+                            <a class="dropdown-item" th:href="@{/the_thao}">Thể thao</a>
+                            <a class="dropdown-item" th:href="@{/quan_su}">Quân sự</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton3" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Community<span
+                                class="sr-only">(current)</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                            <a class="dropdown-item" th:href="@{/chuyen_la}">Chuyện lạ</a>
+                            <a class="dropdown-item" th:href="@{/doi_song}">Đời sống</a>
+                            <a class="dropdown-item" th:href="@{gia_dinh}">Gia đình</a>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/Contact_us}">Contact <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<!--<div id="fh5co-title-box" >-->
+<!--    <div class="overlay"></div>-->
+<!--    <div class="page-title">-->
+<!--        <img th:src="@{/home/images/anh17.png}" alt="Free HTML5 by FreeHTMl5.co">-->
+<!--        <span><p id="hvn"></p></span>-->
+<!--        <h2>Tin tức mới nhất</h2>-->
+<!--    </div>-->
+<!--</div>-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="fh5co-single-content" class="container-fluid pb-4 pt-4 paddding">
+    <div class="container paddding">
+        <div class="row mx-0">
+            <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft" th:utext="${newDTO.content}" >
+<!--                <div th:utext="${newDTO.shortDescription}">Content</div>-->
+<!--                <div th:utext="${newDTO.content}">Content</div>-->
+
+
+            </div>
+
+            <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Từ khoá tìm kiếm nhiều</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="fh5co_tags_all">
+                    <a href="#" class="fh5co_tagg">Âm nhạc</a>
+                    <a href="#" class="fh5co_tagg">Khoa học</a>
+                    <a href="#" class="fh5co_tagg">Thể thao</a>
+                    <a href="#" class="fh5co_tagg">Hoa hậu</a>
+                    <a href="#" class="fh5co_tagg">Thời trang</a>
+                    <a href="#" class="fh5co_tagg">Tuesday</a>
+                    <a href="#" class="fh5co_tagg">Nhiếp ảnh</a>
+                    <a href="#" class="fh5co_tagg">Đời sống</a>
+                    <a href="#" class="fh5co_tagg">Ẩm thực</a>
+                    <a href="#" class="fh5co_tagg">Gia đình</a>
+                    <a href="#" class="fh5co_tagg">Trường học</a>
+                    <a href="#" class="fh5co_tagg">Tuesday</a>
+                </div>
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom pt-3 py-2 mb-4">Phổ biến nhất</div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center">
+                        <img th:src="@{/home/images/anh3.jpg}" alt="img" class="fh5co_most_trading"/>
+                    </div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Vàng trong nước và thế giới đồng loạt lao dốc.</div>
+                        <div class="most_fh5co_treding_font_123"> December 13, 2020</div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center">
+                        <img th:src="@{/home/images/anh1.jpg}" alt="img" class="fh5co_most_trading"/>
+                    </div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Loạt cây thông Noel khổng lồ thu hút giới trẻ tới
+                            check-in, chụp ảnh.
+                        </div>
+                        <div class="most_fh5co_treding_font_123"> December 15, 2020</div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center">
+                        <img th:src="@{/home/images/anh2.jpg}" alt="img" class="fh5co_most_trading"/>
+                    </div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font">
+                            Thoả thuận bí mật giữa Thụy Sĩ và Trung Quốc .
+                        </div>
+                        <div class="most_fh5co_treding_font_123"> December 14, 2020</div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center"><img th:src="@{/home/images/anh4.jpg}" alt="img"
+                                                              class="fh5co_most_trading"/></div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Tìm thấy hành tinh mới có thể tồn tại sự sống.</div>
+                        <div class="most_fh5co_treding_font_123"> December 15, 2020</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+    <div class="be-comment-block">
+        <h1 class="comments-title">Comments (3)</h1>
+        <div class="be-comment">
+            <div class="be-img-comment">
+                <a href="blog-detail-2.html">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
+                </a>
+            </div>
+            <div class="be-comment-content">
+
+				<span class="be-comment-name">
+					<a href="blog-detail-2.html">Ravi Sah</a>
+					</span>
+                <span class="be-comment-time">
+					<i class="fa fa-clock-o"></i>
+					May 27, 2015 at 3:14am
+				</span>
+                <p class="be-comment-text">
+                    Pellentesque gravida tristique ultrices.
+                    Sed blandit varius mauris, vel volutpat urna hendrerit id.
+                    Curabitur rutrum dolor gravida turpis tristique efficitur.
+                </p>
+            </div>
+        </div>
+
+
+        <th:block th:each="item : ${model.listResult}">
+            <div class="be-comment">
+                <div class="be-img-comment">
+                    <a href="">
+                        <img style="width: 42px; height: 42px; border-radius: 50%" th:src="@{'http://localhost:8080/' + ${image}}" alt="" class="be-ava-comment">
+                    </a>
+                </div>
+
+
+                <div class="be-comment-content">
+			<span class="be-comment-name" th:text="${fullName}">
+
+			</span>
+                    <span class="be-comment-time">
+				<i class="fa fa-clock-o" ></i>
+                        <span id="hvn"></span>
+
+			</span>
+                    <p class="be-comment-text" th:text="${item.comment}">
+
+                    </p>
+                </div>
+            </div>
+        </th:block>
+        <form id="formSubmit" name="formSubmit" th:object="${model}">
+            <div class="row">
+                <!--                    <div class="col-xs-12 col-sm-6">-->
+                <!--                        <div class="form-group fl_icon">-->
+                <!--                            <div class="icon"><i class="fa fa-user"></i></div>-->
+                <!--                            <input class="form-input" type="text" placeholder="Your name">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="col-xs-12 col-sm-6 fl_icon">-->
+                <!--                        <div class="form-group fl_icon">-->
+                <!--                            <div class="icon"><i class="fa fa-envelope-o"></i></div>-->
+                <!--                            <input class="form-input" type="text" placeholder="Your email">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <div class="col-xs-12">
+                    <div class="form-group">
+                            <textarea class="form-input" required="" placeholder="Your text" th:field="*{comment}"
+                                      id="comment" name="comment">
+                                 </textarea>
+                        <input type="hidden" th:value="${newDTO.getId()}" id="newId" name="newId"/>
+                        <input type="hidden" th:value="${userId}" id="userId" name="userId"/>
+
+
+                    </div>
+                </div>
+                <input class="btn btn-primary pull-right" type="submit" value="submit"></input>
+                <!--                    <a class="btn btn-primary pull-right">submit</a>-->
+            </div>
+        </form>
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--            <div class="col-xs-12">-->
+    <!--                <div class="form-group">-->
+    <!--                    <textarea class="form-input" required="" placeholder="Your text" th:field="*{comment}" ></textarea>-->
+    <!--&lt;!&ndash;                    <input type="hidden" th:value="${newDTO.getId()}" id="newId" name="newId"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <input type="hidden"  th:value="${userId}"  id="userId" name="userId"/>&ndash;&gt;-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--&lt;!&ndash;                <input type="hidden" th:value="${newDTO.getId()}" id="newId" name="newId"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <input type="hidden"  th:value="${userId}"  id="userId" name="userId"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <input th:field="*{comment}" id="comment" name="comment"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <input type="submit" value="Them binh luan" />&ndash;&gt;-->
+
+    <!--        </div>-->
+    <!--        <input type="submit"  class="btn btn-primary pull-right">submit</input>-->
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+
+</div>
+</div>
+
+</div>
+</body>
+
+
+<br>
+
+
+<script th:src="@{/admin/paging/jquery.twbsPagination.js}"></script>
+<script th:src="@{/admin/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery-ui.custom.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.ui.touch-punch.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.easypiechart.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.sparkline.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.flot.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.flot.pie.min.js}"></script>
+<script th:src="@{/admin/assets/js/jquery.flot.resize.min.js}"></script>
+<script th:src="@{/admin/assets/js/ace-elements.min.js}"></script>
+<script th:src="@{/admin/assets/js/ace.min.js}"></script>
+<script th:src="@{/admin/assets/js/bootstrap.min.js}"></script>
+
+<!-- page specific plugin scripts -->
+<script th:src="@{/admin/assets/js/jquery-ui.min.js}"></script>
+<!-- Bootstrap core JavaScript -->
+<script th:src="@{/web/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{/web/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script th:src="@{/home/js/owl.carousel.min.js}"></script>
+<!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<!-- Waypoints -->
+<script th:src="@{/home/js/jquery.waypoints.min.js}"></script>
+<!-- Parallax -->
+<script th:src="@{/home/js/jquery.stellar.min.js}"></script>
+<!-- Main -->
+<script th:src="@{/home/js/main.js}"></script>
+<script>if (!navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) {
+    $(window).stellar();
+}</script>
+<script>
+    var today = new Date();
+    var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+    document.getElementById("hvn").innerHTML = date;
+
+</script>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#formSubmit").submit(function (event) {
+            event.preventDefault();
+
+            var newId = $("#newId").val();
+            var userId = $("#userId").val();
+            var comment = $("#comment").val();
+            // var id = $("#newId").val();
+            var json = {"newId": newId, "userId": userId, "comment": comment};
+
+
+            addComment();
+
+            function addComment() {
+
+                $.ajax({
+                    url: "/api/comment",
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(json),
+                    dataType: 'json',
+                    success: function (result) {
+                        // window.location.href = "${editNewURL}?id="+result.id+"&message=insert_success";
+                        console.log("ok add");
+                        window.location.href = "/trang-chu/noi-dung/" + newId;
+
+                    },
+                    error: function (error) {
+                        // window.location.href = "${newURL}?page=1&limit=2&message=error_system";
+                        console.log("no add");
+                    }
+                });
+            }
+
+
+        });
+    });
+</script>
+</body>
+</html>

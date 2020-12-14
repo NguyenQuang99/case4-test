@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--
+	24 News by FreeHTML5.co
+	Twitter: https://twitter.com/fh5co
+	Facebook: https://fb.com/fh5co
+	URL: https://freehtml5.co
+-->
+<html lang="en" class="no-js" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>24 News — Website tin tức cập nhật liên tục</title>
+    <link th:href="@{/home/css/media_query.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/home/css/bootstrap.css}" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link th:href="@{/home/css/animate.css}" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link th:href="@{/home/css/owl.carousel.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/home/css/owl.theme.default.css}" rel="stylesheet" type="text/css"/>
+    <!-- Bootstrap CSS -->
+    <link th:href="@{/home/css/style_1.css}" rel="stylesheet" type="text/css"/>
+    <!-- Modernizr JS -->
+    <script th:src="@{/home/js/modernizr-3.5.0.min.js}"></script>
+</head>
+<body>
+<div class="container-fluid fh5co_header_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 fh5co_mediya_center"><a href="https://lichvannien365.com/lich-am-duong" class="color_fff fh5co_mediya_setting"><i
+                    class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp;December 19, 2020</a>
+                <div class="d-inline-block fh5co_trading_posotion_relative"><a href="#" class="treding_btn">Thịnh Hành</a>
+                    <div class="fh5co_treding_position_absolute"></div>
+                </div>
+                <a href="#" class="color_fff fh5co_mediya_setting">Cập nhật nhanh nhất tin tức thịnh hành trên toàn thế giới</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 fh5co_padding_menu">
+                <img th:src="@{/home/images/logo.png}" alt="img" class="fh5co_logo_width"/>
+            </div>
+            <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div></a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div></a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div></a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a href="https://twitter.com/" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div></a>
+                </div>
+                <div class="text-center d-inline-block">
+                    <a href="https://www.facebook.com/tintuconlinevnn" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div></a>
+                </div>
+                <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
+                <div class="d-inline-block text-center dd_position_relative ">
+                    <select class="form-control fh5co_text_select_option">
+                        <option>Tiếng Việt</option>
+                        <option>English </option>
+                        <option>French </option>
+                        <option>German </option>
+                        <option>Spanish </option>
+                    </select>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-faded fh5co_padd_mediya padding_786">
+    <div class="container padding_786">
+        <nav class="navbar navbar-toggleable-md navbar-light ">
+            <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+            <a class="navbar-brand" href="#"><img th:src="@{/home/images/logo.png}" alt="img" class="mobile_logo_width"/></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+<!--                    <li class="nav-item ">-->
+<!--                        <a class="nav-link" th:href="@{/quan-tri/trang-chu}" th:case="ROLE_MANAGER">Quản trị <span class="sr-only">(current)</span></a>-->
+<!--                    </li>-->
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/trang-chu}">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/single}">Single <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">World <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                            <a class="dropdown-item" th:href="@{/kinh_te}">Kinh tế</a>
+                            <a class="dropdown-item" th:href="@{/the_thao}">Thể thao</a>
+                            <a class="dropdown-item" th:href="@{/quan_su}">Quân sự</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton3" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Community<span class="sr-only">(current)</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                            <a class="dropdown-item" th:href="@{/chuyen_la}">Chuyện lạ</a>
+                            <a class="dropdown-item" th:href="@{/doi_song}">Đời sống</a>
+                            <a class="dropdown-item" th:href="@{gia_dinh}">Gia đình</a>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/Contact_us}">Contact <span class="sr-only">(current)</span></a>
+                    </li>
+<!--                    <li class="nav-item ">-->
+<!--                        <a class="nav-link" th:href="@{/dang-nhap}">Login <span class="sr-only">(current)</span></a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item ">-->
+<!--                        <a class="nav-link" th:href="@{/dang-ki}">Signup<span class="sr-only">(current)</span></a>-->
+<!--                    </li>-->
+                    <th:block th:if="${fullName}">
+                        <li class="nav-item"><a class="nav-link" href="#">Welcome <span th:text="${fullName}"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/thoat}" >Thoát</a></li>
+                        <li class="nav-item active">
+                            <img style="width: 42px; height: 42px; border-radius: 50%" th:src="@{'http://localhost:8080/' + ${image}}">
+                        </li>
+                    </th:block>
+
+                    <th:block th:unless="${fullName}">
+                        <li class="nav-item"><a class="nav-link" th:href="@{/dang-nhap}">Đăng nhập</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/dang-ky}">Đăng ký</a></li>
+                    </th:block>
+                    <li class="nav-item ">-->
+                                                <a class="nav-link" href="#">Giỏ hàng<span class="sr-only">(current)</span></a>
+                                            </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="container-fluid pb-4 pt-4 paddding">
+    <div class="container paddding">
+        <div class="row mx-0">
+            <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">News</div>
+                </div>
+                <div class="row pb-4">
+                    <div class="col-md-5">
+                        <div class="fh5co_hover_news_img">
+                            <div class="fh5co_news_img">
+                                <img th:src="@{/home/images/photo-1449157291145-7efd050a4d0e-578x362.jpg}" alt=""/>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <a href="single.html" class="fh5co_magna py-2"> Magna aliqua ut enim ad minim veniam quis
+                            nostrud quis xercitation ullamco. </a> <a href="#" class="fh5co_mini_time py-3"> Thomson Smith -
+                        April 18,2016 </a>
+                        <div class="fh5co_consectetur"> Quis nostrud xercitation ullamco laboris nisi aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+                <th:block th:each="item : ${model.listResult}">
+                    <div class="row pb-4">
+                        <div class="col-md-5">
+                            <div class="fh5co_hover_news_img">
+                                <div class="fh5co_news_img">
+<!--                                    <img th:field="*{thumbnail}" id="thumbnail" name="thumbnail" alt=""/>-->
+                                    <th:block  th:utext="${item.thumbnail}"></th:block>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <a   class="fh5co_magna py-2" th:href="@{'/trang-chu/noi-dung/' + ${item.id}}">
+                            </a> <a th:href="@{'/trang-chu/noi-dung/' + ${item.id}}" th:text="${item.title}" class="fh5co_mini_time py-3">
+                        </a>
+                                <div class="fh5co_consectetur" >
+                                    <th:block th:utext="${item.shortDescription}"></th:block>
+
+                                </div>
+                        </div>
+                    </div>
+                </th:block>
+                <div class="row pb-4">
+                    <div class="col-md-5">
+                        <div class="fh5co_hover_news_img">
+                            <div class="fh5co_news_img">
+                                <img th:src="@{/home/images/photo-1449157291145-7efd050a4d0e-578x362.jpg}" alt=""/>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <a href="single.html" class="fh5co_magna py-2"> Magna aliqua ut enim ad minim veniam quis
+                            nostrud quis xercitation ullamco. </a> <a href="#" class="fh5co_mini_time py-3"> Thomson Smith -
+                        April 18,2016 </a>
+                        <div class="fh5co_consectetur"> Quis nostrud xercitation ullamco laboris nisi aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Từ khoá tìm kiếm nhiều</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="fh5co_tags_all">
+                    <a href="#" class="fh5co_tagg">Âm nhạc</a>
+                    <a href="#" class="fh5co_tagg">Khoa học</a>
+                    <a href="#" class="fh5co_tagg">Thể thao</a>
+                    <a href="#" class="fh5co_tagg">Hoa hậu</a>
+                    <a href="#" class="fh5co_tagg">Thời trang</a>
+                    <a href="#" class="fh5co_tagg">Tuesday</a>
+                    <a href="#" class="fh5co_tagg">Nhiếp ảnh</a>
+                    <a href="#" class="fh5co_tagg">Đời sống</a>
+                    <a href="#" class="fh5co_tagg">Ẩm thực</a>
+                    <a href="#" class="fh5co_tagg">Gia đình</a>
+                    <a href="#" class="fh5co_tagg">Trường học</a>
+                    <a href="#" class="fh5co_tagg">Tuesday</a>
+                </div>
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom pt-3 py-2 mb-4">Phổ biến nhất</div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center">
+                        <img th:src="@{/home/images/anh3.jpg}" alt="img" class="fh5co_most_trading"/>
+                    </div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Vàng trong nước và thế giới đồng loạt lao dốc.</div>
+                        <div class="most_fh5co_treding_font_123"> December 13, 2020</div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center">
+                        <img th:src="@{/home/images/anh1.jpg}" alt="img" class="fh5co_most_trading"/>
+                    </div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Loạt cây thông Noel khổng lồ thu hút giới trẻ tới check-in, chụp ảnh.</div>
+                        <div class="most_fh5co_treding_font_123"> December 15, 2020</div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center">
+                        <img th:src="@{/home/images/anh2.jpg}" alt="img" class="fh5co_most_trading"/>
+                    </div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font">
+                            Thoả thuận bí mật giữa Thụy Sĩ và Trung Quốc .</div>
+                        <div class="most_fh5co_treding_font_123"> December 14, 2020</div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center"><img th:src="@{/home/images/anh4.jpg}" alt="img"
+                                                              class="fh5co_most_trading"/></div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Tìm thấy hành tinh mới có thể tồn tại sự sống.</div>
+                        <div class="most_fh5co_treding_font_123"> December 15, 2020</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12 text-center pb-4 pt-4">
+                <a href="#" class="btn_mange_pagging"><i class="fa fa-long-arrow-left"></i>&nbsp;&nbsp; Previous</a>
+                <a href="#" class="btn_pagging">1</a>
+                <a href="#" class="btn_pagging">2</a>
+                <a href="#" class="btn_pagging">3</a>
+                <a href="#" class="btn_pagging">...</a>
+                <a href="#" class="btn_mange_pagging">Next <i class="fa fa-long-arrow-right"></i>&nbsp;&nbsp; </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-4 pt-5">
+    <div class="container animate-box">
+        <div>
+            <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Thịnh hành</div>
+        </div>
+        <div class="owl-carousel owl-theme" id="slider2">
+            <div class="item px-2">
+                <div class="fh5co_hover_news_img">
+                    <div class="fh5co_news_img"><img th:src="@{/home/images/anh6.jpg}" alt=""/></div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=oEEG2wGWq44" class="d-block fh5co_small_post_heading"><span class="">Phát sóng Rap Việt mới nhất</span></a>
+                        <div class="c_g"><i class="fa fa-clock-o"></i> December 14, 2020</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item px-2">
+                <div class="fh5co_hover_news_img">
+                    <div class="fh5co_news_img"><img th:src="@{/home/images/anh7.jpeg}" alt=""/></div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=AOJKnxmY0VQ" class="d-block fh5co_small_post_heading"><span class="">Top 10 diễn viên Hoa ngữ nổi tiếng nhất năm 2020</span></a>
+                        <div class="c_g"><i class="fa fa-clock-o"></i> December 15, 2020</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item px-2">
+                <div class="fh5co_hover_news_img">
+                    <div class="fh5co_news_img"><img th:src="@{/home/images/anh8.jpg}" alt=""/></div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=CkxjR2fq7LU" class="d-block fh5co_small_post_heading"><span class="">Demon Slayer movie trailer</span></a>
+                        <div class="c_g"><i class="fa fa-clock-o"></i> December 15, 2020</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item px-2">
+                <div class="fh5co_hover_news_img">
+                    <div class="fh5co_news_img"><img th:src="@{/home/images/anh9.jpg}" alt=""/></div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=n6PlOaqZKyA" class="d-block fh5co_small_post_heading"><span class="">Lissandra vị tướng cần phải bị cấm</span></a>
+                        <div class="c_g"><i class="fa fa-clock-o"></i> Deceber 15, 2020</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid fh5co_footer_bg pb-3">
+    <div class="container animate-box">
+        <div class="row">
+            <div class="col-12 spdp_right py-5"><img th:src="@{/home/images/white_logo.png}" alt="img" class="footer_logo"/></div>
+            <div class="clearfix"></div>
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="footer_main_title py-3"> About</div>
+                <div class="footer_sub_about pb-3"> Chúng tôi là những thành viên làm case module 4 Java gồm:<br/>
+                    Bùi Xuân Vượng<br/>
+                    Phùng Tuấn Nghĩa<br/>
+                    Nguyễn Minh Quang
+                </div>
+                <div class="footer_mediya_icon">
+                    <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div>
+                    </a></div>
+                    <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div>
+                    </a></div>
+                    <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div>
+                    </a></div>
+                    <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                        <div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div>
+                    </a></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-2">
+                <div class="footer_main_title py-3"> Category</div>
+                <ul class="footer_menu">
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Báo chí</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Thể thao</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Công nghệ</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Tuesday</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Thời trang</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Kinh tế</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Khoa học</a></li>
+                    <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Thế giới</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-5 col-lg-3 position_footer_relative">
+                <div class="footer_main_title py-3"> Most Viewed Posts</div>
+                <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                <div class="footer_position_absolute"><img th:src="@{/home/images/footer_sub_tipik.png}" alt="img" class="width_footer_sub_img"/></div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4 ">
+                <div class="footer_main_title py-3">Tìm kiếm nhiều nhất</div>
+                <a href="https://www.youtube.com/watch?v=oEEG2wGWq44" class="footer_img_post_6"><img th:src="@{home/images/anh6.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=AOJKnxmY0VQ" class="footer_img_post_6"><img th:src="@{/home/images/anh7.jpeg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=CkxjR2fq7LU" class="footer_img_post_6"><img th:src="@{/home/images/anh8.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=n6PlOaqZKyA" class="footer_img_post_6"><img th:src="@{/home/images/anh9.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=VS2uSRQAbFw" class="footer_img_post_6"><img th:src="@{/home/images/anh10.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=xVSSrlEfu0g" class="footer_img_post_6"><img th:src="@{/home/images/anh11.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=n_QZ_vmNYa0" class="footer_img_post_6"><img th:src="@{/home/images/anh12.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=Bhg-Gw953b0" class="footer_img_post_6"><img th:src="@{/home/images/anh13.jpg}" alt="img"/></a>
+                <a href="https://www.youtube.com/watch?v=y_6aSG2yfe8" class="footer_img_post_6"><img th:src="@{/home/images/anh14.jpg}" alt="img"/></a>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-2 pb-4">
+            <div class="col-12 col-md-8 col-lg-7 ">
+                <div class="input-group">
+                    <span class="input-group-addon fh5co_footer_text_box" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                    <input type="text" class="form-control fh5co_footer_text_box" placeholder="Enter your email..." aria-describedby="basic-addon1">
+                    <a href="#" class="input-group-addon fh5co_footer_subcribe" id="basic-addon12"> <i class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid fh5co_footer_right_reserved">
+    <div class="container">
+        <div class="row  ">
+            <div class="col-12 col-md-6 py-4 Reserved"> © Nhóm 3 thành viên VQN <a href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F" title="Free HTML5 Bootstrap templates">Case module 4</a>. </div>
+            <div class="col-12 col-md-6 spdp_right py-4">
+                <a href="blog.html" class="footer_last_part_menu">Home</a>
+                <a href="Contact_us.html" class="footer_last_part_menu">About</a>
+                <a href="Contact_us.html" class="footer_last_part_menu">Contact</a>
+                <a href="blog.html" class="footer_last_part_menu">Latest News</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script th:src="@{/home/js/owl.carousel.min.js}"></script>
+<!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<!-- Waypoints -->
+<script th:src="@{/home/js/jquery.waypoints.min.js}"></script>
+<!-- Main -->
+<script th:src="@{/home/js/main.js}"></script>
+
+</body>
+</html>
